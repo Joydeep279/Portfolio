@@ -7,7 +7,7 @@ const SkillContainer = () => {
         <div
             className="w-screen h-screen relative bg-black"
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${skillBackground})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${skillBackground})`,
                 backgroundSize: "cover",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
@@ -18,7 +18,7 @@ const SkillContainer = () => {
                     <div>
                         <img src={rectangle} className="h-5" alt='react' />
                     </div>
-                    <h1 className='font-outline text-[42px] text-glow'>My SKILLS</h1>
+                    <h1 className='font-outline text-[42px] text-glow font-black'>My SKILLS</h1>
                     <div>
                         <img src={rectangle} className="h-5" alt='react' />
                     </div>

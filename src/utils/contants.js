@@ -1,2 +1,2 @@
-export const aboutMsg = "welcome to my portfolio";
+export const aboutMsg = "Welcome to my Portfolio";
 

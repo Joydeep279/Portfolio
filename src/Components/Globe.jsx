@@ -15,7 +15,7 @@ const Globe = () => {
             {
                 !isBoxOpen ? <img src={BoxClose} className="absolute bottom-20 z-50 w-40 h-40 left-[45%] cursor-pointer" onClick={() => toggleBox()} alt="BoxClose" /> :
 
-                    <div className="absolute bottom-20 left-[35%] z-50 w-[35%] cursor-pointer" onClick={() => toggleBox()}>
+                    <div className="absolute bottom-20 left-[35%] z-50 w-[35%]" >
 
                         <img src={BoxOpen} alt="BoxOpen" className="w-full" />
                         <span className="p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-xl font-medium">
