@@ -1,12 +1,15 @@
 import { createRoot } from "react-dom/client";
 import MainHome from "./Components/Home.jsx";
 import Social from "./Components/Social.jsx";
+import SkillContainer from "./Components/SkillContainer.jsx";
+import Contact from "./Components/Contact.jsx";
 const App = () => {
   return (
     <div>
-      <div className="absolute right-10 top-10 text-white font-Bebas Neue font-bold text-3xl">Contact Me</div>
       <Social />
+      <Contact />
       <MainHome />
+      <SkillContainer />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import astronaut from "../assets/img/astronaut.svg"
 import BoxClose from "../assets/img/BoxClose.svg"
 import BoxOpen from "../assets/img/BoxOpen.svg"
 import { useState } from "react"
-
+import { aboutMsg } from "../utils/contants"
 const Globe = () => {
     const [isBoxOpen, setIsBoxOpen] = useState(false);
     function toggleBox() {
@@ -19,7 +19,7 @@ const Globe = () => {
 
                         <img src={BoxOpen} alt="BoxOpen" className="w-full" />
                         <span className="p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-xl font-medium">
-                            testing the website
+                            {aboutMsg}
                         </span>
                     </div>
             }
