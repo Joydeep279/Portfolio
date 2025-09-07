@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "Death Star";
+  src: url("assets/fonts/Death\ Star.otf");
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("./assets/fonts/BebasNeue-Regular.ttf");
+}
+@theme {
+  --font-death-star: Death Star, "sans-sarif";
+  --font-bebas-neue: Bebas Neue, "sans-sarif";
+}
+
+.font-outline {
+  -webkit-text-stroke: 1px #ceb7ff; /* 2px outline, black color */
+  color: transparent; /* Fill color of the text */
+}
+.text-glow {
+  text-shadow: rgba(206, 183, 255, 0.5) 0px 0px 25px;
+}
