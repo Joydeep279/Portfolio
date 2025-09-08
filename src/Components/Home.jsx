@@ -1,6 +1,7 @@
 import homeBg from "../assets/img/homeBg.png";
 import Globe from "./Globe";
 import Heading from "./Header";
+import Social from "../Components/Social";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
         backgroundPosition: "center"
       }}
     >
+      <Social/>
       <Heading />
       <Globe />
     </div>

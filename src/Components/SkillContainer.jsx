@@ -2,13 +2,15 @@ import React from 'react'
 import skillBackground from "../assets/img/skillBackground.png"
 import SkillContainerGlobe from './SkillContainerGlobe';
 import rectangle from "../assets/img/Rectangle 1.svg"
+import Social from './Social';
+import SkillsList from './SkillsList';
 const SkillContainer = () => {
     return (
         <div
             className="w-screen h-screen relative bg-black"
             style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${skillBackground})`,
-                backgroundSize: "cover",
+                backgroundSize: "100% 100%",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
             }}
@@ -23,10 +25,11 @@ const SkillContainer = () => {
                         <img src={rectangle} className="h-5" alt='react' />
                     </div>
                 </div>
-                <span className="text-3xl text-white font-bebas-neue">Here is a list of some of my skills </span>
+                <span className="text-3xl text-[#d0b4f5] font-bebas-neue text-glow ">Here is a list of some of my skills </span>
             </div>
             <SkillContainerGlobe />
-
+            <Social />
+            <SkillsList/>
         </div>
     )
 }

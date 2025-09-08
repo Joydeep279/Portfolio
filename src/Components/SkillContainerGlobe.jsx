@@ -8,7 +8,7 @@ const SkillContainerGlobe = () => {
             <img src={astronaut} className="absolute bottom-11/12 z-50 h-24" alt="astronaut" />
 
 
-            <img src={globe} alt="globe" className="relative w-3/4 h-full" />
+            <img src={globe} alt="globe" className="relative w-4/6 h-full" />
 
         </div>
 
