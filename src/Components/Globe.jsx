@@ -1,35 +1,40 @@
-import globe from "../assets/img/globe.png"
-import astronaut from "../assets/img/astronaut.svg"
-import BoxClose from "../assets/img/BoxClose.svg"
-import BoxOpen from "../assets/img/BoxOpen.svg"
-import { useState } from "react"
-import { aboutMsg } from "../utils/contants"
+import globe from "../assets/img/globe.png";
+import astronaut from "../assets/img/astronaut.svg";
+import BoxClose from "../assets/img/BoxClose.svg";
+import BoxOpen from "../assets/img/BoxOpen.svg";
+import { useState } from "react";
+import { aboutMsg } from "../utils/contants";
 const Globe = () => {
-    const [isBoxOpen, setIsBoxOpen] = useState(false);
-    function toggleBox() {
-        setIsBoxOpen(!isBoxOpen)
-    }
-    return (
-        <div className="absolute bottom-0 left-[49%] -translate-x-1/2 w-[90vw] flex justify-center items-end">
-            <img src={astronaut} className="absolute bottom-11/12 z-50 h-24" alt="astronaut" />
-            {
-                !isBoxOpen ? <img src={BoxClose} className="absolute bottom-20 z-50 w-40 h-40 left-[45%] cursor-pointer" onClick={() => toggleBox()} alt="BoxClose" /> :
-
-                    <div className="absolute bottom-20 left-2/6 z-50 w-[35%]" >
-
-                        <img src={BoxOpen} alt="BoxOpen" className="w-full" />
-                        <span className="p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-xl font-medium">
-                            {aboutMsg}
-                        </span>
-                    </div>
-            }
-
-            <img src={globe} alt="globe" className="relative w-4/6 h-full" />
-
+  const [isBoxOpen, setIsBoxOpen] = useState(false);
+  function toggleBox() {
+    setIsBoxOpen(!isBoxOpen);
+  }
+  return (
+    <div className="absolute bottom-0 left-[49%] -translate-x-1/2 w-[90vw] flex justify-center items-end">
+      <img
+        src={astronaut}
+        className="absolute bottom-11/12 z-50 h-16 sm:h-20 md:h-24"
+        alt="astronaut"
+      />
+      {!isBoxOpen ? (
+        <img
+          src={BoxClose}
+          className="absolute bottom-12 sm:bottom-16 md:bottom-20 z-50 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 left-[45%] cursor-pointer"
+          onClick={() => toggleBox()}
+          alt="BoxClose"
+        />
+      ) : (
+        <div className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-2/6 z-50 w-[45%] sm:w-[40%] md:w-[35%]">
+          <img src={BoxOpen} alt="BoxOpen" className="w-full" />
+          <span className="p-3 sm:p-4 md:p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-sm sm:text-base md:text-xl font-medium">
+            {aboutMsg}
+          </span>
         </div>
+      )}
 
+      <img src={globe} alt="globe" className="relative w-5/6 sm:w-4/5 md:w-4/6 h-full" />
+    </div>
+  );
+};
 
-    )
-}
-
-export default Globe
+export default Globe;

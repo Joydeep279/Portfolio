@@ -6,19 +6,17 @@ import Social from "../Components/Social";
 const Home = () => {
   return (
     <div
-      className="w-screen h-screen"
+      className="w-screen relative h-screen p-0 m-0"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${homeBg})`,
         backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "center"
-      }}
-    >
-      <Social/>
+        backgroundPosition: "center",
+      }}>
+      <Social />
       <Heading />
       <Globe />
     </div>
-
   );
 };
 
