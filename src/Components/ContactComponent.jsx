@@ -1,6 +1,24 @@
 import ContactBackground from "../assets/img/ContactBackground.png";
 import rectangle from "../assets/img/Rectangle 1.svg";
 import EmailComponent from "./EmailComponent";
+import { motion } from "framer-motion";
+
+const containerVars = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.2, delayChildren: 0.2 },
+  },
+};
+
+const itemVars = {
+  hidden: { opacity: 0, y: 25, filter: "blur(6px)" },
+  visible: {
+    opacity: 1, y: 0, filter: "blur(0px)",
+    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
+  },
+};
+
 const ContactComponent = () => {
   return (
     <div
@@ -11,18 +29,27 @@ const ContactComponent = () => {
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}>
-      <div className="flex flex-col items-center pt-20">
-        <div>
-          <img src={rectangle} className="h-3 sm:h-4 md:h-5" alt="react" />
-        </div>
-        <h1 className="font-outline font-out text-lg sm:text-2xl md:text-[42px] text-glow font-black">
+      <motion.div
+        className="flex flex-col items-center pt-20"
+        variants={containerVars}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
+        <motion.div variants={itemVars}>
+          <img src={rectangle} className="h-3 sm:h-4 md:h-5" alt="rect" />
+        </motion.div>
+        <motion.h1
+          className="font-outline font-out text-lg sm:text-2xl md:text-[42px] text-glow font-black"
+          variants={itemVars}
+        >
           CONTACT ME
-        </h1>
-        <div>
-          <img src={rectangle} className="h-3 sm:h-4 md:h-5" alt="react" />
-        </div>
-        <EmailComponent/>
-      </div>
+        </motion.h1>
+        <motion.div variants={itemVars}>
+          <img src={rectangle} className="h-3 sm:h-4 md:h-5" alt="rect" />
+        </motion.div>
+        <EmailComponent />
+      </motion.div>
     </div>
   );
 };
