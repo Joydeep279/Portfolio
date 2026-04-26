@@ -12,4 +12,7 @@ export const skillSet = [
   "Css",
   "JavaScript",
   "React",
+  "Css",
+  "JavaScript",
+  "React",
 ];
