@@ -30,9 +30,9 @@ const EmailComponent = () => {
           EMAIL:{" "}
         </span>
         <motion.input
-          placeholder="joydeepnath279@gmail.com"
+          placeholder="Type Your Email"
           type="email"
-          className="bg-[#CEB7FF] opacity-30 w-96 h-10 font-medium text-black focus:opacity-100"
+          className="p-2 bg-[#CEB7FF] opacity-30 w-96 h-10 font-medium text-black focus:opacity-60"
           whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
           transition={{ duration: 0.3 }}
         />
@@ -44,7 +44,7 @@ const EmailComponent = () => {
         <motion.input
           placeholder="Type Your Subject"
           type="text"
-          className="bg-[#CEB7FF] opacity-30 w-96 h-10 font-medium text-black focus:opacity-100"
+          className="p-2 bg-[#CEB7FF] opacity-30 w-96 h-10 font-medium text-black focus:opacity-60"
           whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
           transition={{ duration: 0.3 }}
         />
@@ -56,7 +56,7 @@ const EmailComponent = () => {
         <motion.textarea
           placeholder="Type your message!"
           type="text"
-          className="bg-[#CEB7FF] opacity-30 w-96 h-40 font-medium text-black focus:opacity-100"
+          className="p-2.5 bg-[#CEB7FF] opacity-30 w-96 h-40 font-medium text-black focus:opacity-60"
           whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
           transition={{ duration: 0.3 }}
         />
