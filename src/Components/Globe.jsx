@@ -12,11 +12,11 @@ const Globe = () => {
     setIsBoxOpen(!isBoxOpen);
   }
   return (
-    <div className="absolute bottom-0 left-[49%] -translate-x-1/2 w-[90vw] flex justify-center items-end">
+    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95vw] sm:w-[90vw] flex justify-center items-end">
       {/* Floating astronaut */}
       <motion.img
         src={astronaut}
-        className="absolute bottom-11/12 z-50 h-16 sm:h-20 md:h-24"
+        className="absolute bottom-[85%] sm:bottom-11/12 z-50 h-10 sm:h-20 md:h-24"
         alt="astronaut"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const Globe = () => {
           <motion.img
             key="closed"
             src={BoxClose}
-            className="absolute bottom-12 sm:bottom-16 md:bottom-20 z-50 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 left-[45%] cursor-pointer"
+            className="absolute bottom-8 sm:bottom-16 md:bottom-20 z-50 w-16 h-16 sm:w-32 sm:h-32 md:w-40 md:h-40 left-1/2 -translate-x-1/2 sm:left-[45%] sm:translate-x-0 cursor-pointer"
             onClick={() => toggleBox()}
             alt="BoxClose"
             initial={{ opacity: 0, scale: 0.6 }}
@@ -52,7 +52,7 @@ const Globe = () => {
         ) : (
           <motion.div
             key="opened"
-            className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-2/6 z-50 w-[45%] sm:w-[40%] md:w-[35%]"
+            className="absolute bottom-8 sm:bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 sm:left-2/6 sm:translate-x-0 z-50 w-[65%] sm:w-[40%] md:w-[35%]"
             initial={{ opacity: 0, scale: 0.6, rotateY: -90 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
             exit={{ opacity: 0, scale: 0.8 }}
@@ -65,7 +65,7 @@ const Globe = () => {
               onClick={() => toggleBox()}
             />
             <motion.span
-              className="p-3 sm:p-4 md:p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-sm sm:text-base md:text-xl font-medium"
+              className="p-2 sm:p-4 md:p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-[0.6rem] sm:text-base md:text-xl font-medium leading-tight sm:leading-normal"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
@@ -80,7 +80,7 @@ const Globe = () => {
       <motion.img
         src={globe}
         alt="globe"
-        className="relative w-5/6 sm:w-4/5 md:w-4/6 h-full"
+        className="relative w-full sm:w-4/5 md:w-4/6 h-full"
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

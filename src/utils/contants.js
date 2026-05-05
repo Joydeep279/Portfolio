@@ -1,4 +1,4 @@
-export const aboutMsg = "Welcome to my Portfolio";
+export const aboutMsg = "Welcome to my Portfolio.Hope you are doing well on your life";
 export const skillSet = [
   "Html",
   "Css",
