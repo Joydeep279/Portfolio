@@ -91,15 +91,6 @@ const ProjectComponent = () => {
                 {/* Title with enhanced glow */}
                 <motion.h1
                     className="font-outline font-out text-lg sm:text-2xl md:text-[42px] font-black tracking-[0.15em] sm:tracking-[0.2em]"
-                    variants={itemVars}
-                    style={{
-                        textShadow: "0 0 25px rgba(206, 183, 255, 0.5), 0 0 50px rgba(206, 183, 255, 0.2)",
-                    }}
-                    whileHover={{
-                        textShadow: "0 0 35px rgba(206, 183, 255, 0.8), 0 0 70px rgba(206, 183, 255, 0.4)",
-                        letterSpacing: "0.3em",
-                        transition: { duration: 0.4 },
-                    }}
                 >
                     PROJECTS
                 </motion.h1>

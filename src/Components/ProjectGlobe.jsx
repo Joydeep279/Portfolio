@@ -48,7 +48,10 @@ const ProjectGlobe = () => {
 
             {/* Project title with animated entrance */}
             <AnimatePresence mode="wait">
-                <motion.h1
+                <motion.a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     key={project.name}
                     className="text-2xl sm:text-4xl md:text-5xl text-glow text-white font-bebas-neue font-medium absolute bottom-[80%] z-50 tracking-wider"
                     initial={{ opacity: 0, y: -20, filter: "blur(8px)" }}
@@ -60,7 +63,7 @@ const ProjectGlobe = () => {
                     }}
                 >
                     {project.name}
-                </motion.h1>
+                </motion.a>
             </AnimatePresence>
 
             {/* Left arrow */}

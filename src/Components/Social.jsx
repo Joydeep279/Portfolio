@@ -1,6 +1,7 @@
 import github from "../assets/img/github.svg";
 import instagram from "../assets/img/instagram.svg";
 import linkedin from "../assets/img/linkedin.svg";
+import leetCode from "../assets/img/leetCodeIcon.png";
 import { motion } from "framer-motion";
 
 const containerVariants = {
@@ -44,6 +45,16 @@ const Social = () => {
         <img src={github} />
       </motion.a>
       <motion.a
+        className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9"
+        href="https://leetcode.com/u/joydeep279/"
+        target="blank"
+        variants={iconVariants}
+        whileHover={{ scale: 1.3, filter: "drop-shadow(0 0 12px rgba(206, 183, 255, 0.8))" }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <img src={leetCode} />
+      </motion.a>
+      <motion.a
         className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
         href=""
         variants={iconVariants}
@@ -62,6 +73,7 @@ const Social = () => {
       >
         <img src={linkedin} />
       </motion.a>
+
     </motion.div>
   );
 };
