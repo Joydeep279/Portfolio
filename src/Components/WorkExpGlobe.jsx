@@ -29,11 +29,11 @@ const WorkExpGlobe = () => {
     const workExp = WorkExperience[currentProject];
 
     return (
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95vw] sm:w-[90vw] max-h-[80vh] flex justify-center items-end">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95vw] sm:w-[90vw] h-[70vh] md:h-[80vh] flex justify-center items-end">
             {/* Floating astronaut */}
             <motion.img
                 src={astronaut}
-                className="absolute bottom-[88%] sm:bottom-[55%] z-50 h-10 sm:h-20 md:h-24"
+                className="absolute bottom-[85%] md:bottom-[65%] z-50 h-16 sm:h-20 md:h-24"
                 alt="astronaut"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ const WorkExpGlobe = () => {
             <AnimatePresence mode="wait">
                 <motion.h1
                     rel="noopener noreferrer"
-                    className="text-2xl sm:text-4xl md:text-5xl text-glow text-white font-bebas-neue font-medium absolute bottom-[80%] z-50 tracking-wider"
+                    className="text-3xl sm:text-4xl md:text-5xl text-glow text-white font-bebas-neue font-medium absolute bottom-[72%] md:bottom-[55%] z-50 tracking-wider text-center w-full px-4"
                     initial={{ opacity: 0, y: -20, filter: "blur(8px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     exit={{ opacity: 0, y: 20, filter: "blur(8px)" }}
@@ -68,7 +68,7 @@ const WorkExpGlobe = () => {
             <motion.img
                 src={leftArrow}
                 alt="Previous"
-                className="absolute bottom-[55%] left-[5%] sm:left-[20%] z-[60] h-8 sm:h-14 md:h-24 cursor-pointer"
+                className="absolute bottom-[45%] md:bottom-[40%] left-[2%] sm:left-[10%] md:left-[20%] z-[60] h-12 sm:h-14 md:h-24 cursor-pointer"
                 onClick={prevProject}
                 whileHover={{
                     scale: 1.25,
@@ -83,7 +83,7 @@ const WorkExpGlobe = () => {
             <motion.img
                 src={rightArrow}
                 alt="Next"
-                className="absolute bottom-[55%] right-[5%] sm:right-[20%] z-[60] h-8 sm:h-14 md:h-24 cursor-pointer"
+                className="absolute bottom-[45%] md:bottom-[40%] right-[2%] sm:right-[10%] md:right-[20%] z-[60] h-12 sm:h-14 md:h-24 cursor-pointer"
                 onClick={nextProject}
                 whileHover={{
                     scale: 1.25,
@@ -100,7 +100,7 @@ const WorkExpGlobe = () => {
                     <motion.img
                         key="closed"
                         src={BoxClose}
-                        className="absolute bottom-8 sm:bottom-16 md:bottom-20 z-50 w-16 h-16 sm:w-32 sm:h-32 md:w-40 md:h-40 left-1/2 -translate-x-1/2 sm:left-[45%] sm:translate-x-0 cursor-pointer"
+                        className="absolute bottom-4 sm:bottom-8 md:bottom-12 z-50 w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 left-1/2 -translate-x-1/2 cursor-pointer"
                         onClick={() => toggleBox()}
                         alt="BoxClose"
                         initial={{ opacity: 0, scale: 0.6 }}
@@ -125,7 +125,7 @@ const WorkExpGlobe = () => {
                 ) : (
                     <motion.div
                         key="opened"
-                        className="absolute bottom-8 sm:bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 sm:left-2/6 sm:translate-x-0 z-50 w-[65%] sm:w-[40%] md:w-[35%]"
+                        className="absolute bottom-4 sm:bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-50 w-[85%] sm:w-[50%] md:w-[40%]"
                         initial={{ opacity: 0, scale: 0.6, rotateY: -90 }}
                         animate={{ opacity: 1, scale: 1, rotateY: 0 }}
                         exit={{ opacity: 0, scale: 0.8 }}
@@ -144,7 +144,7 @@ const WorkExpGlobe = () => {
                             transition={{ delay: 0.4, duration: 0.5 }}
                         >
                             <motion.p
-                                className="text-white/90 font-mono text-[0.5rem] sm:text-xs md:text-sm text-center leading-tight"
+                                className="text-white/90 font-mono text-[0.7rem] sm:text-xs md:text-sm text-center leading-tight px-2"
                                 initial={{ opacity: 0, y: 8 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5, duration: 0.4 }}
@@ -161,7 +161,7 @@ const WorkExpGlobe = () => {
             <motion.img
                 src={globe}
                 alt="globe"
-                className="relative w-full sm:w-[95%] md:w-[85%] h-full object-contain pointer-events-none"
+                className="relative w-full sm:w-[95%] md:w-[85%] h-full object-contain object-bottom pointer-events-none"
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

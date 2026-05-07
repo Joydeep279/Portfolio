@@ -91,7 +91,7 @@ const WorkExperience = () => {
 
                 {/* Title with enhanced glow */}
                 <motion.h1
-                    className="font-outline font-out text-lg sm:text-2xl md:text-[42px] font-black tracking-[0.15em] sm:tracking-[0.2em]"
+                    className="font-outline font-out text-xl sm:text-2xl md:text-[42px] font-black tracking-[0.1em] sm:tracking-[0.2em] text-center px-4"
                 >
                     Work Experience
                 </motion.h1>
