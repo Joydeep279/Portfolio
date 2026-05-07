@@ -61,12 +61,6 @@ To explore this project locally, follow these simple steps:
 
 ---
 
-## 🖼️ Preview
-
-*(Add your stunning screenshots or GIFs here to wow your visitors!)*
-
----
-
 ## 🛰️ Connect with Me
 
 Feel free to reach out for collaborations or just to say hi!
