@@ -29,7 +29,7 @@ const slideVariants = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
       ease: [0.22, 1, 0.36, 1],
     },
   },
@@ -38,7 +38,7 @@ const slideVariants = {
     y: direction > 0 ? "-40%" : "40%",
     scale: 0.95,
     transition: {
-      duration: 0.4,
+      duration: 0.8,
       ease: [0.22, 1, 0.36, 1],
     },
   }),
@@ -63,7 +63,7 @@ const App = () => {
       clearTimeout(cooldownTimer.current);
       cooldownTimer.current = setTimeout(() => {
         isTransitioning.current = false;
-      }, 500);
+      }, 800);
     },
     [currentIndex]
   );
