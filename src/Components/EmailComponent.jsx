@@ -1,7 +1,7 @@
 import github from "../assets/img/github.svg";
 import instagram from "../assets/img/instagram.svg";
 import linkedin from "../assets/img/linkedin.svg";
-import leetCode from "../assets/img/leetCodeIcon.png";
+import leetCode from "../assets/img/leetcodeIcon.png";
 import { motion } from "framer-motion";
 
 const EmailComponent = () => {
