@@ -16,7 +16,7 @@ const Globe = () => {
       {/* Floating astronaut */}
       <motion.img
         src={astronaut}
-        className="absolute bottom-[85%] sm:bottom-11/12 z-50 h-10 sm:h-20 md:h-24"
+        className="absolute bottom-[85%] sm:bottom-[90%] z-50 h-16 sm:h-20 md:h-24"
         alt="astronaut"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const Globe = () => {
           <motion.img
             key="closed"
             src={BoxClose}
-            className="absolute bottom-8 sm:bottom-16 md:bottom-20 z-50 w-16 h-16 sm:w-32 sm:h-32 md:w-40 md:h-40 left-1/2 -translate-x-1/2 sm:left-[45%] sm:translate-x-0 cursor-pointer"
+            className="absolute bottom-8 sm:bottom-16 md:bottom-20 z-50 w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 left-1/2 -translate-x-1/2 sm:left-[45%] sm:translate-x-0 cursor-pointer"
             onClick={() => toggleBox()}
             alt="BoxClose"
             initial={{ opacity: 0, scale: 0.6 }}
@@ -52,7 +52,7 @@ const Globe = () => {
         ) : (
           <motion.div
             key="opened"
-            className="absolute bottom-8 sm:bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 sm:left-2/6 sm:translate-x-0 z-50 w-[65%] sm:w-[40%] md:w-[35%]"
+            className="absolute bottom-8 sm:bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 sm:left-1/3 sm:translate-x-0 z-50 w-[75%] sm:w-[45%] md:w-[35%]"
             initial={{ opacity: 0, scale: 0.6, rotateY: -90 }}
             animate={{ opacity: 1, scale: 1, rotateY: 0 }}
             exit={{ opacity: 0, scale: 0.8 }}
@@ -65,7 +65,7 @@ const Globe = () => {
               onClick={() => toggleBox()}
             />
             <motion.span
-              className="p-2 sm:p-4 md:p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-[0.6rem] sm:text-base md:text-xl font-medium leading-tight sm:leading-normal"
+              className="p-3 sm:p-4 md:p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-[0.55rem] sm:text-base md:text-xl font-medium leading-[1.2] sm:leading-normal"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}

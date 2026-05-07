@@ -6,7 +6,7 @@ import Social from "../Components/Social";
 const Home = () => {
   return (
     <div
-      className="w-screen relative h-screen p-0 m-0"
+      className="w-full relative h-screen p-0 m-0 overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${homeBg})`,
         backgroundSize: "100% 100%",

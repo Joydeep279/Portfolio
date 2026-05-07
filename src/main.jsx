@@ -13,7 +13,7 @@ const sections = [
   { id: "home", label: "Home", component: MainHome },
   { id: "skills", label: "Skills", component: SkillContainer },
   { id: "project", label: "Project", component: ProjectComponent },
-  { id: "WorkExp", label: "Work Experience", component: WorkExperience },
+  { id: "WorkExp", label: "Work Exp", component: WorkExperience },
   { id: "contact", label: "Contact", component: ContactComponent },
 ];
 
