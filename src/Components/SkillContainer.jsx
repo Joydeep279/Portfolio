@@ -29,7 +29,7 @@ const titleItemVariants = {
 const SkillContainer = () => {
   return (
     <div
-      className="w-screen h-screen relative bg-black p-0 m-0"
+      className="w-screen h-screen relative bg-black p-0 m-0 overflow-hidden flex flex-col items-center pt-6 sm:pt-8 md:pt-10"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${skillBackground})`,
         backgroundSize: "100% 100%",
@@ -37,7 +37,7 @@ const SkillContainer = () => {
         backgroundPosition: "center",
       }}>
       <motion.div
-        className="absolute inset-0 mx-auto mt-6 sm:mt-8 md:mt-10 w-4/5 sm:w-3/4 md:w-1/2 text-[#CEB7FF] font-death-star flex flex-col items-center text-nowrap gap-4 sm:gap-6 md:gap-8"
+        className="relative w-4/5 sm:w-3/4 md:w-1/2 text-[#CEB7FF] font-death-star flex flex-col items-center text-nowrap gap-4 sm:gap-6 md:gap-8 z-10"
         variants={titleContainerVariants}
         initial="hidden"
         whileInView="visible"

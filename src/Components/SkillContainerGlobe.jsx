@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 const SkillContainerGlobe = () => {
   return (
-    <div className="absolute bottom-0 left-[49%] -translate-x-1/2 w-[90vw] flex justify-center items-end">
+    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[40%] sm:h-[50%] md:h-[60%] flex justify-center items-end pointer-events-none">
       {/* Floating astronaut with gentle drift */}
       <motion.img
         src={astronaut}
-        className="absolute bottom-11/12 z-50 h-16 sm:h-20 md:h-24"
+        className="absolute bottom-[80%] sm:bottom-[75%] md:bottom-[70%] z-50 h-16 sm:h-20 md:h-24 pointer-events-auto"
         alt="astronaut"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ const SkillContainerGlobe = () => {
       <motion.img
         src={globe}
         alt="globe"
-        className="relative w-5/6 sm:w-4/5 md:w-4/6 h-full"
+        className="relative w-full sm:w-[95%] md:w-[85%] h-full object-contain object-bottom pointer-events-auto"
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

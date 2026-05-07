@@ -25,7 +25,7 @@ const skillVariants = {
 const SkillsList = () => {
   return (
     <motion.div
-      className="absolute top-2/3 left-[15%] sm:left-[20%] md:left-[30%] -translate-y-1/2 z-50 w-[70%] sm:w-[60%] md:w-[45%] flex flex-row-reverse flex-wrap justify-end gap-2 sm:gap-3 md:gap-5"
+      className="relative z-50 w-[95%] sm:w-[75%] md:w-[65%] lg:w-[60%] flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mt-8 sm:mt-10 md:mt-12"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
