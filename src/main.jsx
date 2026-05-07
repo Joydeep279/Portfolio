@@ -7,11 +7,13 @@ import SkillContainer from "./Components/SkillContainer.jsx";
 import SideNav from "./Components/SideNav.jsx";
 import ContactComponent from "./Components/ContactComponent.jsx";
 import ProjectComponent from "./Components/Project.jsx";
+import WorkExperience from "./Components/WorkExp.jsx";
 
 const sections = [
   { id: "home", label: "Home", component: MainHome },
   { id: "skills", label: "Skills", component: SkillContainer },
   { id: "project", label: "Project", component: ProjectComponent },
+  { id: "WorkExp", label: "Work Experience", component: WorkExperience },
   { id: "contact", label: "Contact", component: ContactComponent },
 ];
 

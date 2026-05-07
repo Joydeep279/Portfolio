@@ -1,31 +1,21 @@
+import github from "../assets/img/github.svg";
+import instagram from "../assets/img/instagram.svg";
+import linkedin from "../assets/img/linkedin.svg";
+import leetCode from "../assets/img/leetCodeIcon.png";
 import { motion } from "framer-motion";
 
-const containerVars = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15, delayChildren: 0.6 },
-  },
-};
 
-const rowVars = {
-  hidden: { opacity: 0, x: 60 },
-  visible: {
-    opacity: 1, x: 0,
-    transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] },
-  },
-};
+
 
 const EmailComponent = () => {
   return (
     <motion.div
       className="pt-10 flex flex-col items-end justify-center gap-5 mx-auto"
-      variants={containerVars}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <motion.div className="flex gap-5" variants={rowVars}>
+      <motion.div className="flex gap-5" >
         <span className="text-white text-4xl font-bebas-neue text-right">
           EMAIL:{" "}
         </span>
@@ -37,7 +27,7 @@ const EmailComponent = () => {
           transition={{ duration: 0.3 }}
         />
       </motion.div>
-      <motion.div className="flex gap-5" variants={rowVars}>
+      <motion.div className="flex gap-5" >
         <span className="text-white text-4xl font-bebas-neue text-right">
           SUBJECT:{" "}
         </span>
@@ -49,7 +39,7 @@ const EmailComponent = () => {
           transition={{ duration: 0.3 }}
         />
       </motion.div>
-      <motion.div className="flex gap-5" variants={rowVars}>
+      <motion.div className="flex gap-5" >
         <span className="text-white text-4xl font-bebas-neue text-right">
           CONTENT:{" "}
         </span>
@@ -60,6 +50,52 @@ const EmailComponent = () => {
           whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
           transition={{ duration: 0.3 }}
         />
+      </motion.div>
+      <motion.div
+        className="flex flex-row gap-6 sm:gap-8 justify-center w-96 mt-2 z-[100]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.a
+          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+          href="https://github.com/Joydeep279"
+          target="blank"
+          whileHover={{ scale: 1.3, filter: "drop-shadow(0 0 12px rgba(206, 183, 255, 0.8))" }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <img src={github} />
+        </motion.a>
+        <motion.a
+          className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9"
+          href="https://leetcode.com/u/joydeep279/"
+          target="blank"
+
+          whileHover={{ scale: 1.3, filter: "drop-shadow(0 0 12px rgba(206, 183, 255, 0.8))" }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <img src={leetCode} />
+        </motion.a>
+        <motion.a
+          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+          href=""
+
+          whileHover={{ scale: 1.3, filter: "drop-shadow(0 0 12px rgba(206, 183, 255, 0.8))" }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <img src={instagram} />
+        </motion.a>
+        <motion.a
+          className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
+          href="https://www.linkedin.com/in/joydeep-nath007"
+          target="blank"
+
+          whileHover={{ scale: 1.3, filter: "drop-shadow(0 0 12px rgba(206, 183, 255, 0.8))" }}
+          whileTap={{ scale: 0.9 }}
+        >
+          <img src={linkedin} />
+        </motion.a>
+
       </motion.div>
     </motion.div>
   );

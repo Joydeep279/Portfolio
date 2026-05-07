@@ -1,14 +1,14 @@
-import globe from "../assets/img/projectGlobe.png";
-import astronaut from "../assets/img/projectAstronaut.png";
+import globe from "../assets/img/workExpGlobe.png";
+import astronaut from "../assets/img/workExpAstronaut.svg";
 import BoxClose from "../assets/img/BoxClose.svg";
 import BoxOpen from "../assets/img/BoxOpen.svg";
 import leftArrow from "../assets/img/leftArrow.png";
 import rightArrow from "../assets/img/rightArrow.png";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import projectDesc from "../utils/projectDesc";
+import WorkExperience from "../utils/workExperience";
 
-const ProjectGlobe = () => {
+const WorkExpGlobe = () => {
     const [isBoxOpen, setIsBoxOpen] = useState(true);
     const [currentProject, setCurrentProject] = useState(0);
 
@@ -17,16 +17,16 @@ const ProjectGlobe = () => {
     }
 
     function nextProject() {
-        setCurrentProject((prev) => (prev + 1) % projectDesc.length);
+        setCurrentProject((prev) => (prev + 1) % WorkExperience.length);
         setIsBoxOpen(false);
     }
 
     function prevProject() {
-        setCurrentProject((prev) => (prev - 1 + projectDesc.length) % projectDesc.length);
+        setCurrentProject((prev) => (prev - 1 + WorkExperience.length) % WorkExperience.length);
         setIsBoxOpen(false);
     }
 
-    const project = projectDesc[currentProject];
+    const workExp = WorkExperience[currentProject];
 
     return (
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[95vw] sm:w-[90vw] max-h-[80vh] flex justify-center items-end">
@@ -48,11 +48,8 @@ const ProjectGlobe = () => {
 
             {/* Project title with animated entrance */}
             <AnimatePresence mode="wait">
-                <motion.a
-                    href={project.demoUrl}
-                    target="_blank"
+                <motion.h1
                     rel="noopener noreferrer"
-                    key={project.id}
                     className="text-2xl sm:text-4xl md:text-5xl text-glow text-white font-bebas-neue font-medium absolute bottom-[80%] z-50 tracking-wider"
                     initial={{ opacity: 0, y: -20, filter: "blur(8px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -62,8 +59,9 @@ const ProjectGlobe = () => {
                         textShadow: "0 0 30px rgba(206, 183, 255, 0.6), 0 0 60px rgba(206, 183, 255, 0.3)",
                     }}
                 >
-                    {project.name}
-                </motion.a>
+                    {workExp.CompanyName}
+                </motion.h1>
+
             </AnimatePresence>
 
             {/* Left arrow */}
@@ -151,35 +149,9 @@ const ProjectGlobe = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.5, duration: 0.4 }}
                             >
-                                {project.description}
+                                {workExp.description}
                             </motion.p>
-                            <motion.div
-                                className="flex gap-2 sm:gap-3 mt-1"
-                                initial={{ opacity: 0, y: 8 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.7, duration: 0.4 }}
-                            >
-                                {project.githubUrl && (
-                                    <a
-                                        href={project.githubUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[0.5rem] sm:text-xs font-mono text-white border border-white/30 hover:border-[#ceb7ff] hover:text-[#ceb7ff] hover:shadow-[0_0_12px_rgba(206,183,255,0.4)] transition-all duration-300"
-                                    >
-                                        GitHub
-                                    </a>
-                                )}
-                                {project.demoUrl && (
-                                    <a
-                                        href={project.demoUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[0.5rem] sm:text-xs font-mono text-black bg-[#ceb7ff] hover:bg-white hover:shadow-[0_0_12px_rgba(206,183,255,0.6)] transition-all duration-300"
-                                    >
-                                        Demo
-                                    </a>
-                                )}
-                            </motion.div>
+
                         </motion.div>
                     </motion.div>
                 )}
@@ -209,4 +181,4 @@ const ProjectGlobe = () => {
     );
 };
 
-export default ProjectGlobe;
+export default WorkExpGlobe;
