@@ -67,7 +67,7 @@ const EmailComponent = () => {
           <img src={github} />
         </motion.a>
         <motion.a
-          className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9"
+          className="w-6 h-6 sm:w-8 sm:h-8 md:w-9 md:h-9"
           href="https://leetcode.com/u/joydeep279/"
           target="blank"
 
