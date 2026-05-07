@@ -62,7 +62,7 @@ const SideNav = ({ sections, currentIndex, onNavigate }) => {
     <>
       {/* ── Navigation Rail (right side) ── */}
       <motion.nav
-        className="fixed right-4 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 z-[150]"
+        className="hidden sm:block fixed right-4 sm:right-6 md:right-8 top-1/2 -translate-y-1/2 z-[150]"
         variants={railVariants}
         initial="hidden"
         animate="visible">
@@ -218,7 +218,7 @@ const SideNav = ({ sections, currentIndex, onNavigate }) => {
       </motion.nav>
 
       {/* ── Section indicator (bottom-right) ── */}
-      <div className="fixed bottom-5 right-4 sm:right-6 md:right-8 z-[150]">
+      <div className="hidden sm:block fixed bottom-5 right-4 sm:right-6 md:right-8 z-[150]">
         <AnimatePresence mode="wait">
           <motion.div
             key={sections[currentIndex].id}
