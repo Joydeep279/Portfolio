@@ -1,4 +1,4 @@
-import homeBg from "../assets/img/homeBg.png";
+import homeBg from "../assets/img/homeBG.png";
 import Globe from "./Globe";
 import Heading from "./Header";
 import Social from "../Components/Social";

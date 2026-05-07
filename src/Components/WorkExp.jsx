@@ -1,4 +1,4 @@
-import workExpBg from "../assets/img/workExpBg.png";
+import workExpBg from "../assets/img/workExpBG.png";
 import rectangle from "../assets/img/Rectangle 1.svg";
 import { motion } from "framer-motion";
 
