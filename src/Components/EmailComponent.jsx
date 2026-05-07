@@ -4,55 +4,52 @@ import linkedin from "../assets/img/linkedin.svg";
 import leetCode from "../assets/img/leetCodeIcon.png";
 import { motion } from "framer-motion";
 
-
-
-
 const EmailComponent = () => {
   return (
     <motion.div
-      className="pt-10 flex flex-col items-end justify-center gap-5 mx-auto"
+      className="pt-6 sm:pt-10 flex flex-col items-center sm:items-end justify-center gap-4 sm:gap-5 mx-auto w-full sm:w-auto"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <motion.div className="flex gap-5" >
-        <span className="text-white text-4xl font-bebas-neue text-right">
+      <motion.div className="flex flex-col sm:flex-row gap-1 sm:gap-5 w-full sm:w-auto" >
+        <span className="text-white text-2xl sm:text-3xl md:text-4xl font-bebas-neue text-left sm:text-right sm:w-28">
           EMAIL:{" "}
         </span>
         <motion.input
           placeholder="Type Your Email"
           type="email"
-          className="p-2 bg-[#CEB7FF] opacity-30 w-96 h-10 font-medium text-black focus:opacity-60"
+          className="p-2 bg-[#CEB7FF] opacity-30 w-full sm:w-80 md:w-96 h-10 font-medium text-black focus:opacity-60"
           whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
           transition={{ duration: 0.3 }}
         />
       </motion.div>
-      <motion.div className="flex gap-5" >
-        <span className="text-white text-4xl font-bebas-neue text-right">
+      <motion.div className="flex flex-col sm:flex-row gap-1 sm:gap-5 w-full sm:w-auto" >
+        <span className="text-white text-2xl sm:text-3xl md:text-4xl font-bebas-neue text-left sm:text-right sm:w-28">
           SUBJECT:{" "}
         </span>
         <motion.input
           placeholder="Type Your Subject"
           type="text"
-          className="p-2 bg-[#CEB7FF] opacity-30 w-96 h-10 font-medium text-black focus:opacity-60"
+          className="p-2 bg-[#CEB7FF] opacity-30 w-full sm:w-80 md:w-96 h-10 font-medium text-black focus:opacity-60"
           whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
           transition={{ duration: 0.3 }}
         />
       </motion.div>
-      <motion.div className="flex gap-5" >
-        <span className="text-white text-4xl font-bebas-neue text-right">
+      <motion.div className="flex flex-col sm:flex-row gap-1 sm:gap-5 w-full sm:w-auto" >
+        <span className="text-white text-2xl sm:text-3xl md:text-4xl font-bebas-neue text-left sm:text-right sm:w-28">
           CONTENT:{" "}
         </span>
         <motion.textarea
           placeholder="Type your message!"
           type="text"
-          className="p-2.5 bg-[#CEB7FF] opacity-30 w-96 h-40 font-medium text-black focus:opacity-60"
+          className="p-2.5 bg-[#CEB7FF] opacity-30 w-full sm:w-80 md:w-96 h-32 sm:h-40 font-medium text-black focus:opacity-60 resize-none"
           whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
           transition={{ duration: 0.3 }}
         />
       </motion.div>
       <motion.div
-        className="flex flex-row gap-6 sm:gap-8 justify-center w-96 mt-2 z-[100]"
+        className="flex flex-row gap-6 sm:gap-8 justify-center self-center w-full sm:w-auto mt-4 sm:mt-2 z-[100]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}

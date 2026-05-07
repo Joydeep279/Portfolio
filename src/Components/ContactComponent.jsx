@@ -22,15 +22,15 @@ const itemVars = {
 const ContactComponent = () => {
   return (
     <div
-      className="w-screen h-screen"
+      className="w-full h-full min-h-screen overflow-y-auto overflow-x-hidden relative"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(${ContactBackground})`,
-        backgroundSize: "100% 100%",
+        backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
       }}>
       <motion.div
-        className="flex flex-col items-center pt-20"
+        className="flex flex-col items-center pt-8 sm:pt-16 md:pt-20 pb-12 px-4 sm:px-6 w-full"
         variants={containerVars}
         initial="hidden"
         whileInView="visible"
