@@ -67,11 +67,13 @@ const ProjectGlobe = () => {
             </AnimatePresence>
 
             {/* Left arrow */}
-            <motion.img
-                src={leftArrow}
-                alt="Previous"
-                className="absolute bottom-[45%] md:bottom-[40%] left-[2%] sm:left-[10%] md:left-[20%] z-[60] h-10 sm:h-14 md:h-20 lg:h-24 cursor-pointer"
-                onClick={prevProject}
+            <motion.button
+                type="button"
+                className="absolute bottom-[45%] md:bottom-[40%] left-[2%] sm:left-[10%] md:left-[20%] z-[60] h-10 sm:h-14 md:h-20 lg:h-24 cursor-pointer bg-transparent border-none p-0"
+                onClick={(e) => { e.stopPropagation(); prevProject(); }}
+                onPointerDown={(e) => e.stopPropagation()}
+                onTouchStart={(e) => e.stopPropagation()}
+                onTouchEnd={(e) => e.stopPropagation()}
                 whileHover={{
                     scale: 1.25,
                     x: -6,
@@ -79,14 +81,18 @@ const ProjectGlobe = () => {
                 }}
                 whileTap={{ scale: 0.85, x: -12 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-            />
+            >
+                <img src={leftArrow} alt="Previous" className="h-full" />
+            </motion.button>
 
             {/* Right arrow */}
-            <motion.img
-                src={rightArrow}
-                alt="Next"
-                className="absolute bottom-[45%] md:bottom-[40%] right-[2%] sm:right-[10%] md:right-[20%] z-[60] h-10 sm:h-14 md:h-20 lg:h-24 cursor-pointer"
-                onClick={nextProject}
+            <motion.button
+                type="button"
+                className="absolute bottom-[45%] md:bottom-[40%] right-[2%] sm:right-[10%] md:right-[20%] z-[60] h-10 sm:h-14 md:h-20 lg:h-24 cursor-pointer bg-transparent border-none p-0"
+                onClick={(e) => { e.stopPropagation(); nextProject(); }}
+                onPointerDown={(e) => e.stopPropagation()}
+                onTouchStart={(e) => e.stopPropagation()}
+                onTouchEnd={(e) => e.stopPropagation()}
                 whileHover={{
                     scale: 1.25,
                     x: 6,
@@ -94,7 +100,9 @@ const ProjectGlobe = () => {
                 }}
                 whileTap={{ scale: 0.85, x: 12 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
-            />
+            >
+                <img src={rightArrow} alt="Next" className="h-full" />
+            </motion.button>
 
             {/* Interactive box – closed / opened */}
             <AnimatePresence mode="wait">
