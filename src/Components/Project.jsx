@@ -49,33 +49,6 @@ const ProjectComponent = () => {
                 backgroundPosition: "center",
             }}>
 
-            {/* Ambient floating particles */}
-            {[...Array(6)].map((_, i) => (
-                <motion.div
-                    key={i}
-                    className="absolute rounded-full pointer-events-none"
-                    style={{
-                        width: 2 + Math.random() * 3,
-                        height: 2 + Math.random() * 3,
-                        background: "rgba(206, 183, 255, 0.4)",
-                        left: `${10 + Math.random() * 80}%`,
-                        top: `${10 + Math.random() * 80}%`,
-                        boxShadow: "0 0 6px rgba(206, 183, 255, 0.3)",
-                    }}
-                    animate={{
-                        y: [0, -30 - Math.random() * 40, 0],
-                        x: [0, Math.random() * 20 - 10, 0],
-                        opacity: [0.2, 0.7, 0.2],
-                    }}
-                    transition={{
-                        duration: 4 + Math.random() * 4,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: Math.random() * 3,
-                    }}
-                />
-            ))}
-
             <motion.div
                 className="flex flex-col items-center pt-16 sm:pt-20 relative z-10 h-full w-full"
                 variants={containerVars}
@@ -90,7 +63,7 @@ const ProjectComponent = () => {
 
                 {/* Title with enhanced glow */}
                 <motion.h1
-                    className="font-outline font-out text-lg sm:text-2xl md:text-[42px] font-black tracking-[0.15em] sm:tracking-[0.2em]"
+                    className="font-outline font-out text-xl sm:text-2xl md:text-[42px] font-black tracking-[0.1em] sm:tracking-[0.2em] text-center px-4"
                 >
                     PROJECTS
                 </motion.h1>

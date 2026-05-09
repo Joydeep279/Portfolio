@@ -65,7 +65,7 @@ const Globe = () => {
               onClick={() => toggleBox()}
             />
             <motion.span
-              className="p-3 sm:p-4 md:p-5 absolute inset-0 flex items-start justify-center text-white font-mono text-[0.55rem] sm:text-base md:text-xl font-medium leading-[1.2] sm:leading-normal"
+              className="p-3 sm:p-4 md:p-5 absolute inset-0 flex items-center justify-center text-center text-white font-mono text-[0.55rem] sm:text-base md:text-xl font-medium leading-[1.2] sm:leading-normal"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}

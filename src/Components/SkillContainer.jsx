@@ -1,7 +1,6 @@
 import skillBackground from "../assets/img/skillBackground.png";
 import SkillContainerGlobe from "./SkillContainerGlobe";
 import rectangle from "../assets/img/Rectangle 1.svg";
-import Social from "./Social";
 import SkillsList from "./SkillsList";
 import { motion } from "framer-motion";
 
