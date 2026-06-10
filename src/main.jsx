@@ -21,25 +21,25 @@ const sections = [
 const slideVariants = {
   enter: (direction) => ({
     opacity: 0,
-    y: direction > 0 ? "40%" : "-40%",
-    scale: 0.95,
+    y: direction > 0 ? "30%" : "-30%",
+    scale: 0.97,
   }),
   center: {
     opacity: 1,
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      duration: 0.4,
+      ease: [0.16, 1, 0.3, 1],
     },
   },
   exit: (direction) => ({
     opacity: 0,
-    y: direction > 0 ? "-40%" : "40%",
-    scale: 0.95,
+    y: direction > 0 ? "-30%" : "30%",
+    scale: 0.97,
     transition: {
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      duration: 0.35,
+      ease: [0.16, 1, 0.3, 1],
     },
   }),
 };
@@ -63,7 +63,7 @@ const App = () => {
       clearTimeout(cooldownTimer.current);
       cooldownTimer.current = setTimeout(() => {
         isTransitioning.current = false;
-      }, 800);
+      }, 450);
     },
     [currentIndex]
   );
@@ -80,7 +80,7 @@ const App = () => {
   useEffect(() => {
     const handleWheel = (e) => {
       e.preventDefault();
-      if (Math.abs(e.deltaY) < 30) return; // ignore tiny scroll
+      if (Math.abs(e.deltaY) < 15) return; // ignore tiny scroll
       if (e.deltaY > 0) goNext();
       else goPrev();
     };
@@ -111,7 +111,7 @@ const App = () => {
     };
     const handleTouchEnd = (e) => {
       const delta = touchStartY - e.changedTouches[0].clientY;
-      if (Math.abs(delta) > 60) {
+      if (Math.abs(delta) > 40) {
         if (delta > 0) goNext();
         else goPrev();
       }
