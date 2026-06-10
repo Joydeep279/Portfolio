@@ -19,8 +19,8 @@ const EmailComponent = () => {
         <motion.input
           placeholder="Type Your Email"
           type="email"
-          className="p-2 bg-[#CEB7FF] opacity-30 w-full sm:w-80 md:w-96 h-10 font-medium text-black focus:opacity-60"
-          whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
+          className="p-2.5 bg-white/10 backdrop-blur-sm w-full sm:w-80 md:w-96 h-11 font-medium text-white placeholder-white/40 rounded-lg border border-white/15 outline-none focus:bg-white/15 focus:border-[#CEB7FF]/60 transition-colors duration-300"
+          whileFocus={{ boxShadow: "0 0 24px rgba(206, 183, 255, 0.35)" }}
           transition={{ duration: 0.3 }}
         />
       </motion.div>
@@ -31,8 +31,8 @@ const EmailComponent = () => {
         <motion.input
           placeholder="Type Your Subject"
           type="text"
-          className="p-2 bg-[#CEB7FF] opacity-30 w-full sm:w-80 md:w-96 h-10 font-medium text-black focus:opacity-60"
-          whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
+          className="p-2.5 bg-white/10 backdrop-blur-sm w-full sm:w-80 md:w-96 h-11 font-medium text-white placeholder-white/40 rounded-lg border border-white/15 outline-none focus:bg-white/15 focus:border-[#CEB7FF]/60 transition-colors duration-300"
+          whileFocus={{ boxShadow: "0 0 24px rgba(206, 183, 255, 0.35)" }}
           transition={{ duration: 0.3 }}
         />
       </motion.div>
@@ -43,8 +43,8 @@ const EmailComponent = () => {
         <motion.textarea
           placeholder="Type your message!"
           type="text"
-          className="p-2.5 bg-[#CEB7FF] opacity-30 w-full sm:w-80 md:w-96 h-32 sm:h-40 font-medium text-black focus:opacity-60 resize-none"
-          whileFocus={{ opacity: 1, boxShadow: "0 0 20px rgba(206, 183, 255, 0.5)" }}
+          className="p-2.5 bg-white/10 backdrop-blur-sm w-full sm:w-80 md:w-96 h-32 sm:h-40 font-medium text-white placeholder-white/40 rounded-lg border border-white/15 outline-none focus:bg-white/15 focus:border-[#CEB7FF]/60 transition-colors duration-300 resize-none"
+          whileFocus={{ boxShadow: "0 0 24px rgba(206, 183, 255, 0.35)" }}
           transition={{ duration: 0.3 }}
         />
       </motion.div>
