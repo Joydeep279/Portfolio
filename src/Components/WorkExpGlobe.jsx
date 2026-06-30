@@ -159,7 +159,16 @@ const WorkExpGlobe = () => {
                             >
                                 {workExp.description}
                             </motion.p>
-
+                            {workExp.Github && (
+                                <a
+                                    href={workExp.Github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-2 py-0.5 sm:px-3 sm:py-1 rounded-full text-[0.6rem] sm:text-xs font-mono text-white border border-white/30 hover:border-[#ceb7ff] hover:text-[#ceb7ff] hover:shadow-[0_0_12px_rgba(206,183,255,0.4)] transition-all duration-300"
+                                >
+                                    GitHub
+                                </a>
+                            )}
                         </motion.div>
                     </motion.div>
                 )}

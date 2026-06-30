@@ -11,9 +11,9 @@ import WorkExperience from "./Components/WorkExp.jsx";
 
 const sections = [
   { id: "home", label: "Home", component: MainHome },
-  { id: "skills", label: "Skills", component: SkillContainer },
   { id: "project", label: "Project", component: ProjectComponent },
   { id: "WorkExp", label: "Work Exp", component: WorkExperience },
+  { id: "skills", label: "Skills", component: SkillContainer },
   { id: "contact", label: "Contact", component: ContactComponent },
 ];
 
